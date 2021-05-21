@@ -22,5 +22,11 @@ namespace clientes.DAL
            return conexion.ejecutarComandosSinRetornoDatos("insert into te_clientes values ('001','"+oClientesBLL.cli_nombre1+"'," +
                "'Edgardo','Rodriguez','Colindres','','Jalapa','33123785','','2996363802101','12-13-1993')");
         }
+        public DataSet MostrarClientes()
+        {
+            SqlCommand Sentencia = new SqlCommand("Select * from te_clientes");
+
+            return conexion.EjecutarSentencia(Sentencia);
+        }
     }
 }

@@ -32,6 +32,8 @@ namespace clientes.PL
             
             /*conexionDAL conexion = new conexionDAL();*/
             MessageBox.Show("Conectado..." );
+            //Clase DAL Clientes.. Objeto que tiene la informacion de la GUI
+
             oClientesDAL.Agregar(RecuperarInformacion());
         }
         private ClientesBLL RecuperarInformacion()

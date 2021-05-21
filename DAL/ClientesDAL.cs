@@ -32,6 +32,21 @@ namespace clientes.DAL
 
             }
 
+        public int Actualizar(ClientesBLL oClientesBLL)
+        {
+
+            conexion.ejecutarComandosSinRetornoDatos("update te_clientes " +
+                "set de_clientes ='"+oClientesBLL.cli_nombre1+ "', '" + oClientesBLL.cli_nombre2 + "','"+oClientesBLL.cli_nombre1+ "'," +
+                "'" + oClientesBLL.cli_apellido1 + "','" + oClientesBLL.cli_apellido2+ "','" + oClientesBLL.cli_apellido_casada + "'," +
+                "'" + oClientesBLL.cli_direccion + "','" + oClientesBLL.cli_telefono1 + "','" + oClientesBLL.cli_telefono2 + "'," +
+                "'" + oClientesBLL.cli_identificacion + "','" + oClientesBLL.cli_fecha_nacimiento + 
+                "'where cli_codigo_cliente =" + oClientesBLL.cli_codigo_cliente);
+
+
+            return 1;
+
+        }
+
         public DataSet MostrarClientes()
         {
             SqlCommand Sentencia = new SqlCommand("Select * from te_clientes");

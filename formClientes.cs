@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Windows.Forms;
+using clientes.PL;
 
 namespace clientes
 {
-    internal class formClientes
+    internal class Formclientes
     {
-        public static implicit operator Form1(formClientes v)
+        public static implicit operator Formclientes(Formclientes v)
         {
         }
     }

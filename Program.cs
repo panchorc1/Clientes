@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using clientes.PL;
 
 namespace clientes
 {
@@ -16,7 +17,7 @@ namespace clientes
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new formulario());
+            Application.Run(new Formclientes());
         }
     }
 }

@@ -19,13 +19,13 @@ namespace clientes.PL
         {
             oClientesDAL = new ClientesDAL();
             InitializeComponent();
-            dataClientes.DataSource = oClientesDAL.MostrarClientes().Tables[0];
+            LlegarGid();
         }
 
-        public FormClientes()
+        /*public FormClientes()
         {
             InitializeComponent();
-        }
+        }*/
 
         //BOTON DE AGREGAR
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -36,6 +36,7 @@ namespace clientes.PL
             //Clase DAL Clientes.. Objeto que tiene la informacion de la GUI
 
             oClientesDAL.Agregar(RecuperarInformacion());
+            LlegarGid();
         }
         private ClientesBLL RecuperarInformacion()
         {
@@ -63,6 +64,23 @@ namespace clientes.PL
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             oClientesDAL.Eliminar(RecuperarInformacion());
+            LlegarGid();
+        }
+
+        private void FormClientes_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            oClientesDAL.Actualizar(RecuperarInformacion());
+            LlegarGid();
+        }
+
+        public void LlegarGid()
+        {
+            dataClientes.DataSource = oClientesDAL.MostrarClientes().Tables[0];
         }
     }
 }

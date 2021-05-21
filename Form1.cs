@@ -18,8 +18,8 @@ namespace clientes
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form formulario = new formClientes();
-            formulario.Show();
+            Form Formclientes = new FormClientes();
+            FormClientes.Show();
             
         }
     }

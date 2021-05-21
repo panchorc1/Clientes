@@ -14,6 +14,13 @@ namespace clientes.PL
 {
     public partial class FormClientes : Form
     {
+        ClientesDAL oClientesDAL;
+        public FormClientes()
+        {
+            oClientesDAL = new ClientesDAL();
+            InitializeComponent();
+        }
+
         public FormClientes()
         {
             InitializeComponent();
@@ -22,15 +29,24 @@ namespace clientes.PL
         //BOTON DE AGREGAR
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            //RecuperarInforamcion();
-            conexionDAL conexion = new conexionDAL();
-            MessageBox.Show("Conectado..." + conexion.ejecutarComandosSinRetornoDatos("select * from clientes"));
+            
+            /*conexionDAL conexion = new conexionDAL();*/
+            MessageBox.Show("Conectado..." );
+            oClientesDAL.Agregar(RecuperarInformacion());
         }
-        private void RecuperarInformacion()
+        private ClientesBLL RecuperarInformacion()
         {
-            ClientesBLL oClientes = new ClientesBLL();
+            ClientesBLL oClientesBLL = new ClientesBLL();
             int ID = 0; int.TryParse(cli_nombre1.Text, out ID);
-            oClientes.cli_nombre1 = ID;
+            oClientesBLL.cli_nombre1 = ID;
+
+            oClientesBLL.cli_nombre1 = cli_nombre1.Text;
+
+            /*MessageBox.Show(oClientesBLL.cli_nombre1.ToString());
+            MessageBox.Show(oClientesBLL.cli_apellido1.ToString());*/
+
+            return oClientesBLL
+
         }
     }
 }

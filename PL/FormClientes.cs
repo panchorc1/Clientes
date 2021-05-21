@@ -24,7 +24,7 @@ namespace clientes.PL
         {
             //RecuperarInforamcion();
             conexionDAL conexion = new conexionDAL();
-            MessageBox.Show("Conectado..." + conexion.PruebaConexion("select * from clientes"));
+            MessageBox.Show("Conectado..." + conexion.ejecutarComandosSinRetornoDatos("select * from clientes"));
         }
         private void RecuperarInformacion()
         {

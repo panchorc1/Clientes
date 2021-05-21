@@ -18,12 +18,13 @@ namespace clientes.DAL
              this.Conexion = new SqlConnection(this.CadenaConexion);
             return this.Conexion;
         }
-        public bool PruebaConexion(string strComando)
+        /*Metodo INSER, DELETE, UPDATE*/
+        public bool ejecutarComandosSinRetornoDatos(string strComando)
         {
             try
             {
                 SqlCommand Comando = new SqlCommand();
-                Comando.CommandText = strComando"select * from clientes";
+                Comando.CommandText = strComando;
                 Comando.Connection = this.EstablecerConexion();
                 Conexion.Open();
                 Comando.ExecuteNonQuery();
@@ -35,5 +36,10 @@ namespace clientes.DAL
             {
                 return false;
             }
-    }   }
+        }
+        /*SELECT (Retorno de datos)*/
+
+    }
+
+
 }

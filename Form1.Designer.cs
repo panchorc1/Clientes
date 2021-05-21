@@ -29,25 +29,25 @@ namespace clientes
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnPrincipal = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button1
+            // btnPrincipal
             // 
-            this.button1.Location = new System.Drawing.Point(218, 141);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(349, 172);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Clientes";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnPrincipal.Location = new System.Drawing.Point(218, 141);
+            this.btnPrincipal.Name = "btnPrincipal";
+            this.btnPrincipal.Size = new System.Drawing.Size(349, 172);
+            this.btnPrincipal.TabIndex = 0;
+            this.btnPrincipal.Text = "Clientes";
+            this.btnPrincipal.UseVisualStyleBackColor = true;
+            this.btnPrincipal.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(820, 505);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnPrincipal);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -56,7 +56,7 @@ namespace clientes
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnPrincipal;
     }
 }
 

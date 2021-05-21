@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using clientes.BLL;
 
 namespace clientes.PL
 {
@@ -17,22 +18,8 @@ namespace clientes.PL
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
+        //BOTON DE AGREGAR
+        private void btnAgregar_Click(object sender, EventArgs e)
         {
 
         }

@@ -67,7 +67,6 @@ namespace clientes.PL
             this.label1.Size = new System.Drawing.Size(76, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Primer Nombre";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // cli_nombre1
             // 
@@ -82,7 +81,6 @@ namespace clientes.PL
             this.cli_nombre2.Name = "cli_nombre2";
             this.cli_nombre2.Size = new System.Drawing.Size(185, 20);
             this.cli_nombre2.TabIndex = 3;
-            this.cli_nombre2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // label2
             // 
@@ -92,7 +90,6 @@ namespace clientes.PL
             this.label2.Size = new System.Drawing.Size(90, 13);
             this.label2.TabIndex = 2;
             this.label2.Text = "Segundo Nombre";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // cli_apellido1
             // 
@@ -109,7 +106,6 @@ namespace clientes.PL
             this.label3.Size = new System.Drawing.Size(76, 13);
             this.label3.TabIndex = 4;
             this.label3.Text = "Primer Apellido";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // cli_apellido2
             // 

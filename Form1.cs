@@ -16,5 +16,10 @@ namespace clientes
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            formClientes cambioF = new formClientes
+        }
     }
 }

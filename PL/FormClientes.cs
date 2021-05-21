@@ -19,6 +19,7 @@ namespace clientes.PL
         {
             oClientesDAL = new ClientesDAL();
             InitializeComponent();
+            dataClientes.DataSource = oClientesDAL.MostrarClientes().Tables[0];
         }
 
         public FormClientes()
@@ -39,16 +40,29 @@ namespace clientes.PL
         private ClientesBLL RecuperarInformacion()
         {
             ClientesBLL oClientesBLL = new ClientesBLL();
-            int ID = 0; int.TryParse(cli_nombre1.Text, out ID);
-            oClientesBLL.cli_nombre1 = ID;
+           // int ID = 0; int.TryParse(cli_nombre1.Text, out ID);
+           // oClientesBLL.cli_nombre1 = ID;
 
             oClientesBLL.cli_nombre1 = cli_nombre1.Text;
 
             /*MessageBox.Show(oClientesBLL.cli_nombre1.ToString());
             MessageBox.Show(oClientesBLL.cli_apellido1.ToString());*/
 
-            return oClientesBLL
+            return oClientesBLL;
 
+        }
+
+        private void dataClientes_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            int indice = e.RowIndex;
+
+            cli_codigo_cliente.Text = dataClientes.Rows[indice].Cells[0].Value.ToString();
+            cli_apellido1.Text = dataClientes.Rows[indice].Cells[1].Value.ToString();
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            oClientesDAL.Eliminar(RecuperarInformacion());
         }
     }
 }

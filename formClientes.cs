@@ -5,7 +5,7 @@ namespace clientes
 {
     internal class formClientes
     {
-        public static implicit operator Form(formClientes v)
+        public static implicit operator Form1(formClientes v)
         {
         }
     }

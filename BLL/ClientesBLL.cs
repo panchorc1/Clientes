@@ -8,7 +8,8 @@ namespace clientes.BLL
 {
     class ClientesBLL
     {
-        public int		cli_nombre1 { get; set; }
+		public int		cli_codigo_cliente { get; set; }
+		public string	cli_nombre1 { get; set; }
 		public string	cli_nombre2 { get; set; }
 		public string	cli_apellido1 { get; set; }
 		public string	cli_apellido2 { get; set; }

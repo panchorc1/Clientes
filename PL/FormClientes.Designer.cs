@@ -236,6 +236,7 @@ namespace clientes.PL
             this.btnEliminar.TabIndex = 21;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnActualizar
             // 
@@ -262,6 +263,7 @@ namespace clientes.PL
             this.dataClientes.Name = "dataClientes";
             this.dataClientes.Size = new System.Drawing.Size(783, 351);
             this.dataClientes.TabIndex = 24;
+            this.dataClientes.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataClientes_CellMouseClick);
             // 
             // cli_codigo_cliente
             // 

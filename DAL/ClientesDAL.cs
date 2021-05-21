@@ -19,9 +19,19 @@ namespace clientes.DAL
 
         public bool Agregar(ClientesBLL oClientesBLL)
         {
-           return conexion.ejecutarComandosSinRetornoDatos("insert into te_clientes values ('001','"+oClientesBLL.cli_nombre1+"'," +
-               "'Edgardo','Rodriguez','Colindres','','Jalapa','33123785','','2996363802101','12-13-1993')");
+            return conexion.ejecutarComandosSinRetornoDatos("insert into te_clientes values ('001','" + oClientesBLL.cli_nombre1 + "'," +
+                "'Edgardo','Rodriguez','Colindres','','Jalapa','33123785','','2996363802101','12-13-1993')");
         }
+
+        public int Eliminar (ClientesBLL oClientesBLL) {
+
+            conexion.ejecutarComandosSinRetornoDatos("delete from te_clientes where cli_codigo_cliente =" + oClientesBLL.cli_codigo_cliente);
+
+
+            return 1;
+
+            }
+
         public DataSet MostrarClientes()
         {
             SqlCommand Sentencia = new SqlCommand("Select * from te_clientes");

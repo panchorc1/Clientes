@@ -36,7 +36,25 @@ namespace clientes.DAL
             {
                 return false;
             }
-        }
+            //SOBRECARGA
+            public bool ejecutarComandosSinRetornoDatos(SqlCommand SQLComando)
+            {
+                try
+                {
+                    SqlCommand Comando = SQLComando;
+                    Comando.CommandText = strComando;
+                    Comando.Connection = this.EstablecerConexion();
+                    Conexion.Open();
+                    Comando.ExecuteNonQuery();
+                    Conexion.Close();
+
+                    return true;
+                }
+                catch
+                {
+                    return false;
+                }
+            }
         /*SELECT (Retorno de datos)*/
         public DataSet EjecutarSentencia(SqlCommand sqlComando)
         {

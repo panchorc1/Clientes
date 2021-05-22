@@ -19,8 +19,14 @@ namespace clientes.DAL
 
         public bool Agregar(ClientesBLL oClientesBLL)
         {
-            return conexion.ejecutarComandosSinRetornoDatos("insert into te_clientes values ('001','" + oClientesBLL.cli_nombre1 + "'," +
-                "'Edgardo','Rodriguez','Colindres','','Jalapa','33123785','','2996363802101','12-13-1993')");
+            SqlCommand SQLComando = new SqlCommand("Insert into de_cliente values(@Clientes)");
+
+            SQLComando.Parameters.Add("@Clientes", SqlDbType.VarChar).Value=oClientesBLL.cli_codigo_cliente;
+
+            //return conexion.ejecutarComandosSinRetornoDatos(SQLComando);
+
+           // return conexion.ejecutarComandosSinRetornoDatos("insert into te_clientes values ('001','" + oClientesBLL.cli_nombre1 + "'," +
+             //   "'Edgardo','Rodriguez','Colindres','','Jalapa','33123785','','2996363802101','12-13-1993')");
         }
 
         public int Eliminar (ClientesBLL oClientesBLL) {

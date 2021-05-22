@@ -82,5 +82,13 @@ namespace clientes.PL
         {
             dataClientes.DataSource = oClientesDAL.MostrarClientes().Tables[0];
         }
+        public void LimpiarEntradas()
+        {
+            btnAgregar.Enabled = true;
+            btnEliminar.Enabled = false;
+            btnActualizar.Enabled = false;
+            btnBuscar.Enabled = false;
+        }
+
     }
 }
